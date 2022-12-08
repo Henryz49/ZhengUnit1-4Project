@@ -92,7 +92,7 @@ public class Game {
     }
 
     public void event5() {
-        System.out.println("You spot two people fighting each other in the distance, one had a blade and the other has a firearm. They seem to be pretty well supplied. Will you interfere? (Y/N)");
+        System.out.println("You spot two people fighting each other in the distance, one had a blade and the other has a firearm. The person with the firearm is closer to you. They seem to be pretty well supplied. Will you interfere? (Y/N)");
         String userInput = input.nextLine();
         if (userInput.equals("Y")){
             if(weapon.equals("bow")){
@@ -106,6 +106,10 @@ public class Game {
                 eventCount++;
             }
             }
+        if (userInput.equals("N")){
+            System.out.println("You back away, but person with the firearm turns back and grazes your arm with a bullet. You run for your life.");
+            eventCount++;
+        }
         }
     public void gameInitializer() {
         while (end == false && eventCount <= 4) {
