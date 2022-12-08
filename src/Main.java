@@ -1,4 +1,4 @@
-import java.util.Random;
+
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
@@ -9,7 +9,7 @@ public class Main {
         System.out.println("Oh right, it was " + name);
         System.out.println("You feel around the grass for anything to use, you find a random [sword, greataxe, bow]: ");
         String weapon = input.nextLine();
-        Game game = new Game();
+        Game game = new Game(name, weapon);
         System.out.println(weapon + " lying on the floor. You pick it up and prepare to escape this place");
         //starts the game!
         game.gameInitializer();
